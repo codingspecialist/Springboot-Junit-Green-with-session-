@@ -90,4 +90,20 @@ public class ProductDaoTest {
         assertEquals(1, result);
     }
 
+    @Test
+    public void deleteById_test() {
+        // given
+        Integer productId = 1;
+
+        // verify
+        Product productPS = productDao.findById(productId);
+        assertTrue(productPS == null ? false : true);
+
+        // when
+        int result = productDao.deleteById(productId);
+
+        // then
+        assertEquals(1, result);
+    }
+
 }
